@@ -39,6 +39,9 @@ play = [
 	{ run = "open %s",                     desc = "Play", for = "macos" },
 	{ run = 'start "" %s1', orphan = true, desc = "Play", for = "windows" },
 	{ run = "termux-open %s1",             desc = "Play", for = "android" },
+	{ run = "vlc --one-instance --playlist-enqueue %s", desc = "Add to VLC playlist", for = "linux", orphan = true },
+	{ run = "vlc --one-instance --playlist-enqueue %s", desc = "Add to VLC playlist", for = "macos", orphan = true },
+	{ run = "vlc --one-instance --playlist-enqueue %s", desc = "Add to VLC playlist", for = "windows", orphan = true },
 	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info", for = "unix" },
 	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
 ]
